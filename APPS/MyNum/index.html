@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+  <!-- <link rel ="icon" href="./favicon.ico" type = "image/vnd.microsoft.icon" sizes="32x32"> -->
+	<title>MYNUM - HOME</title>
+	<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+	<!-- <script type="text/javascript">
+	function entryChange1(){
+		radio = document.getElementsByName('type1')
+		if(radio[0].checked) {
+			//フォーム
+			document.getElementById('firstBox').style.display = "none";
+
+		}else if(radio[1].checked) {
+			//フォーム
+			document.getElementById('firstBox').style.display = "";
+		}
+	}
+	//オンロードさせ、リロード時に選択を保持
+	window.onload = entryChange1;
+</script> -->
+
+	<p>あなたのマイナンバーから運勢診断</p>
+  <br>
+	<form method="POST" action="mynum.php">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th>MY NUMBER</th>
+				<td><input type="text" onKeyup="this.value=this.value.replace(/[^0-9]+/,'')" name=MyNum style="height:30px;font-size:24px;" maxlength="12"/> 半角英数12桁</td>
+				<!-- <td><input type="text" name=money style="height:30px;font-size:24px;" maxlength="7"required/> 半角英数 (ex.50000)</td> -->
+			</tr>
+			<tr>
+				<th>BIRTH</th>
+				<td>
+					<p><input type="date" name=date style="height:30px;font-size:24px;"/> カレンダーから選択 </p>
+					<!-- <p><input type="date" name=date style="height:30px;font-size:24px;"required/> カレンダーから選択 </p> -->
+				</td>
+			</tr>
+			<tr>
+				<th>NAME</th>
+				<td><input type="text" name=name style="height:30px;font-size:24px;"/></td>
+				<!-- <td><input type="text" name=money style="height:30px;font-size:24px;" maxlength="7"required/> 半角英数 (ex.50000)</td> -->
+			</tr>
+</table>
+	<p><input type="submit" class="btn" value="POST" width="50"></p>
+</form>
+  <footer>
+  <div id="footer_links">
+		<a class=home href="../" id="home">Home</a>
+    <br><br><br>
+  	<p>Copyright (C) oshi-ire. 2015.  All rights reserved.</p>
+  </div>
+  </footer>
+</body>
+</html>

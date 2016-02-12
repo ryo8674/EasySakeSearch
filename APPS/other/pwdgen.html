@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>PasswordGenerater</title>
+	<style>
+		body {text-align: center;}
+	</style>
+</head>
+<body>
+	<h1>パスワードジェネレータ</h1>
+	<p>桁数：
+		<select name="passwordLength">
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+		</p>
+		<p>
+			記号を含める？
+			<input type="radio" name="passwordType" value="1" checked>YES
+			<input type="radio" name="passwordType" value="0">NO
+		</p>
+		<button id ="generateButton">GO!!</button>
+		<h2>生成結果</h2>
+		<textarea rows="10" cols="40" id="result"></textarea>
+		<script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		<script>
+		$(function(){
+			$('#generateButton').click(function(){
+				var len = $('select[name = passwordLength]').val();
+				// console.log(len);
+
+				var type =$('input[name = passwordType]:checked').val();
+				var seed0 = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+				var seed1 = "!#$%&'()+*}{|¥^-/?><_=";
+				var seed = '';
+
+				if(type == "1"){
+					seed = seed0 + seed1;
+				}else{
+					seed = seed0;
+				}
+
+				var pwd = ' ';
+				for(var i = 0;i < len; i++){
+					var pos = Math.floor(Math.random() * seed.length);
+					pwd += seed[pos];
+				}
+
+				$('#result').text(pwd);
+			})
+		})
+		</script>
+</body>
+</html>

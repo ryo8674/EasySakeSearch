@@ -1,0 +1,64 @@
+body{
+  margin: 0;
+}
+
+/*
+　カラーパターン
+ http://adobe.ly/1iWsRSi
+ */
+
+#top-left {
+  position:absolute;
+  color: white;
+  background: rgba(23, 125, 166,0.85);
+  top: 0%;
+  left : 0%;
+  width: 50%;
+  height: 50%;
+}
+
+#top-right {
+  position:absolute;
+  float: right;
+  color: white;
+  background: rgba(217, 131, 26,0.85);
+  top: 0%;
+  left : 50%;
+  width: 50%;
+  height: 50%;
+}
+
+#bottom-left {
+  position:absolute;
+  color: white;
+  background: rgba(115, 27, 7,0.85);
+  top: 50%;
+  left : 0%;
+  width: 50%;
+  height: 50%;
+}
+
+#bottom-right {
+  position:absolute;
+  color: white;
+  background: rgba(23, 45, 28, 0.85);
+  top: 50%;
+  left : 50%;
+  width: 50%;
+  height: 50%;
+}
+
+
+.linkDiv:hover{
+  opacity: 0.75;
+}
+
+#namespace{
+  position: absolute;
+  top: 50%;
+  left:50%;
+  font-family: 'Bree Serif', serif;
+  font-size: 40px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
